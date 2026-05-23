@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CraftBank AI｜請求書処理の悩みを解決</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+  }
+  .manga-container {
+    max-width: 540px;
+    width: 100%;
+    background: #fff;
+  }
+  .manga-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* 大コマ（縦長）はそのまま幅いっぱい */
+  .panel-large {
+    width: 100%;
+  }
+  /* 中・小コマは左右に少し余白 */
+  .panel-medium {
+    width: 85%;
+    margin: 12px auto;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .panel-small {
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  /* コマ間の余白（場面転換用） */
+  .scene-break {
+    height: 24px;
+    background: #fff;
+  }
+  .scene-break-dark {
+    height: 0;
+    background: #1a1a1a;
+  }
+</style>
+</head>
+<body>
+<div class="manga-container">
+  <!-- コマ1: フック（大コマ・縦長） -->
+  <div class="panel-large">
+    <img src="generated_images/panel_001.png" alt="コマ1" loading="lazy">
+  </div>
+
+  <!-- コマ1→2の場面転換（明→暗） -->
+  <div class="scene-break-dark"></div>
+
+  <!-- コマ2: ナレーション暗転（小コマ） -->
+  <div class="panel-medium">
+    <img src="generated_images/panel_002.png" alt="コマ2" loading="lazy">
+  </div>
+
+  <div class="scene-break"></div>
+
+  <!-- コマ3: 経理室の戦場（中コマ） -->
+  <div class="panel-medium">
+    <img src="generated_images/panel_003.png" alt="コマ3" loading="lazy">
+  </div>
+
+  <div class="scene-break"></div>
+
+  <!-- コマ4: 手書き請求書（小コマ） -->
+  <div class="panel-small">
+    <img src="generated_images/panel_004.png" alt="コマ4" loading="lazy">
+  </div>
+</div>
+</body>
+</html>
